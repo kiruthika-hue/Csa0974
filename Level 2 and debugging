@@ -1,0 +1,341 @@
+
+[1] QLEVEL 2
+ID: 41
+ Question : In an organization they decide to give bonus to all the employees on New Year. A 
+ 5% bonus on salary is given to the grade A workers and 10% bonus on salary to the
+ grade B workers. Write a program to enter the salary and grade of the employee. 
+ If the salary of the employee is less than $10,000 then the employee gets an extr
+ a 2% bonus on salary Calculate the bonus that has to be given to the employee and
+ print the salary that the employee will get.
+ Sample Input & Output:
+ Enter the grade of the employee: B
+ Enter the employee salary: 50000
+ Salary=50000
+ Bonus=5000.0
+ Total to be paid:55000.0
+ 
+ Testcases: 1. Enter the grade of the employee: A
+ Enter the employee salary: 8000
+ 2. Enter the grade of the employee: C
+ Enter the employee salary: 60000
+ 3. Enter the grade of the employee: B
+ Enter the employee salary: 0
+ 4. Enter the grade of the employee: 38000Submitted Answers Report
+ Enter the employee salary: A
+ Program : import java.io.*;
+ import java.util.*;
+ class Employees{
+ public static void main(String args[]){
+ Scanner sc=new Scanner(System.in);
+ }
+ }
+ Input : (no input)
+ Output : (no output)
+ First Save: 2026-06-23 16:14:17
+ Last Save : 2026-06-23 16:24:20
+ ----------------------------------------------------------------------------------------
+ [2] QID: 47
+ Question : Write a program to read a character until a * is encountered. Also count the numb
+ er of uppercase, lowercase, and numbers entered by the users.
+ Sample Input:
+ Enter * to exit 
+ Enter any character: W
+ Enter any character: d
+ Enter any character: A
+ Enter any character: G
+ Enter any character: g
+ Enter any character: H
+ Enter any character: *
+ Sample Output:
+ Total count of lower case:2
+ Total count of upper case:4
+ Total count of numbers =0
+ 
+ Testcases: 1. 1,7,6,9,5
+ 2. S, Q, l, K,7, j, M
+ 3. M, j, L, &, @, G
+ 4. D, K, I, 6, L, *
+ 5. *, K, A, e, 1, 8, %, *
+ Program : import java.io.*;
+ import java.util.*;
+ class CharacterCount{
+ public static void main(String args[]){
+ Scanner sc=new Scanner(System.in);
+ 
+ int upper=0,lower=0,digit=0;
+ char ch;
+ 
+ System.out.println("Enter characters (* to stop):");
+ 
+ while(true){
+ ch=sc.next().charAt(0);
+ 
+ if(ch==’*’)
+ break;
+ 
+ if(Character.isUpperCase(ch))
+ upper++;
+ else if
+ (Character.isLowerCase(ch))Submitted Answers Report
+ lower++;
+ else if(Character.isDigit(ch))
+ digit++;
+ }
+ System.out.println("UpperCase letters:"+upper);
+ System.out.println("LowerCase letters:"+lower);
+ System.out.println("Numbers:"+digit);
+ sc.close();
+ 
+ }
+ }
+ 
+ Input : W d A G g H *
+ Output : Enter characters (* to stop):
+ UpperCase letters:4
+ LowerCase letters:2
+ Numbers:0
+ 
+ First Save: 2026-06-23 15:36:39
+ Last Save : 2026-06-23 16:24:03
+ ----------------------------------------------------------------------------------------
+ [3] QID: 46
+ Question : Write a program to read the numbers until -1 is encountered. Find the average of 
+ positive numbers and negative numbers entered by user.
+ Sample Input:
+ Enter -1 to exit 
+ Enter the number: 7
+ Enter the number: -2
+ Enter the number: 9
+ Enter the number: -8
+ Enter the number: -6
+ Enter the number: -4
+ Enter the number: 10
+ Enter the number: -1
+ Sample Output:
+ The average of negative numbers is: -5.0
+ The average of positive numbers is : 8.66666667
+ 
+ Testcases: 1. -1,43, -87, -29, 1, -9
+ 2. 73, 7-6,2,10,28,-1
+ 3. -5, -9, -46,2,5,0
+ 4. 9, 11, -5, 6, 0,-1
+ 5. -1,-1,-1,-1,-1
+ Program : import java.io.*;
+ import java.util.*;
+ class AveragePositiveNegative{
+ public static void main(String args[]){
+ Scanner sc=new Scanner(System.in);
+ 
+ int num;
+ int posSum=0,negSum=0;
+ int posCount=0,negCount=0;
+ 
+ System.out.println("Enter numbers(-1 to stop):");while(true){
+ num=sc.nextInt();Submitted Answers Report
+ 
+ if(num==-1)
+ break;
+ 
+ if(num>0){
+ posSum +=num;
+ posCount++;
+ } else if(num0)
+ System.out.println("Average of positive numbers = "+(double)posSum/posCount
+ );
+ else
+ System.out.println("No positive numbers entered.");
+ 
+ if(negCount>0)
+ System.out.println("Average of negative numbers ="+(double)negSum/negCount)
+ ;
+ else
+ System.out.println("No negative numbers entered.");
+ sc.close();
+ }
+ }
+ 
+ 
+ Input : 7 -2 9 -8 -6 -4 10 -1
+ Output : Enter numbers(-1 to stop):
+ Average of positive numbers = 8.666666666666666
+ Average of negative numbers =-5.0
+ 
+ First Save: 2026-06-23 15:14:06
+ Last Save : 2026-06-23 16:24:12
+ ----------------------------------------------------------------------------------------
+ [4] QID: 48
+ Question : Write a Program to Find the Nth Largest Number in a array.
+ Sample Input:
+ List : {14, 67, 48, 23, 5, 62}
+ N = 4
+ Sample Output:
+ 4th Largest number: 23
+ 
+ 
+ Testcases: 1. N = 0
+ 2. N = -5
+ 3. N = 1
+ 4. N = M
+ 5. N = %
+ Program : import java.io.*;
+ import java.util.*;
+ class NthLargest{
+ public static void main(String args[]){
+ int[]arr={14,67,48,23,5,62};
+ int n=4;
+ 
+ Arrays.sort(arr);
+ 
+ int nthlargest=arr[arr.length];
+ 
+ System.out.println(n+"4th largest number is:"+nthLargest);Submitted Answers Report
+ }
+ }
+ Input : 14 67 48 23 5 62
+ Output : Error: NthLargest.java:12: error: cannot find symbol
+ System.out.println(n+"4th largest number is:"+nthLargest);
+ ^
+ symbol: variable nthLargest
+ location: class NthLargest
+ 1 error
+ First Save: 2026-06-23 14:54:30
+ Last Save : 2026-06-23 16:23:57
+
+
+Dugging 
+QID: 26
+ Question : A program compares a string with a null value and throws an exception. Modify the
+ code to safely handle null values.
+ public class Q26_NullSafe {
+ public static void main(String[] args) {
+ String s = null;
+ if("Java".equals(s)){
+ System.out.println("Yes");
+ } else {
+ System.out.println("No");
+ }
+ }
+ }
+ 
+ Program : public class NullSafe{
+ public static void main(String args[]){
+ String s=Null;
+ if("Java".equals(s)){
+ System.out.println("Yes");
+ 
+ }else
+ System.out.println("No");
+ }
+ }
+ 
+ 
+ Input : (no input)
+ Output : Error: NullSafe.java:3: error: cannot find symbolString s=Null;
+ ^
+ symbol: variable Null
+ location: class NullSafeSubmitted Answers Report
+ 1 error
+ First Save: 2026-06-23 14:01:40
+ Last Save : 2026-06-23 14:07:00
+ ----------------------------------------------------------------------------------------
+ [2] QID: 23
+ Question : A method is intended to return the sum of two numbers but fails to compile. Ident
+ ify and correct the issue.
+ public class Q23_Method {
+ public static int sum(int a, int b){
+ return a + b;
+ }
+ public static void main(String[] args) {
+ System.out.println(sum(5,3));
+ }
+ }
+ 
+ Program : public class Method{
+ public static void main(String args[]){
+ 
+ 
+ int Sum(int a;int b);{
+ System.out.println(Sum(5,3));
+ 
+ }
+ 
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ Input : (no input)
+ Output : Error: Method.java:5: error: ’;’ expected
+ int Sum(int a;int b);{
+ ^
+ Method.java:5: error: ’;’ expected
+ int Sum(int a;int b);{
+ ^
+ Method.java:10: error: reached end of file while parsing
+ }
+ ^
+ 3 errors
+ First Save: 2026-06-23 13:48:55
+ Last Save : 2026-06-23 14:08:20
+ ----------------------------------------------------------------------------------------
+ [3] QID: 22
+ Question : Two Integer objects are compared using the wrong method, leading to incorrect res
+ ults. Identify and fix the comparison.
+ public class Q22_IntegerCompare {
+ public static void main(String[] args) {Integer a = 1000;
+ Integer b = 1000;
+ if(a.equals(b)){Submitted Answers Report
+ System.out.println("Equal");
+ }
+ }
+ }
+ 
+ Program : public class IntegerCompare{
+ public static void main(String args[]){
+ Integer a=1000;
+ Integer b=1000;
+ System.out.println("Equal");
+ 
+ }
+ }
+ 
+ 
+ Input : (no input)
+ Output : Equal
+ 
+ First Save: 2026-06-23 13:43:01
+ Last Save : 2026-06-23 13:44:16
+ ----------------------------------------------------------------------------------------
+ [4] QID: 13
+ Question : . A program counts occurrences of a character in a string. Verify whether the log
+ ic works correctly and fix any issues if found.
+ public class Q13_CountChar {
+ public static void main(String[] args) {
+ String str = "hello";
+ int count = 0;
+ for(int i=0;i
+ Program : public class CountChar{
+ public static void main(String args[]){
+ String str="Hello";
+ int count=0;
+ for(int i=5;i==);
+ }
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Input : (no input)
+ Output : Error: CountChar.java:5: error: illegal start of expression
+ for(int i=5;i==);
+ ^
+ 1 error
+ First Save: 2026-06-23 13:30:35
+ Last Save : 2026-06-23 13:46:34
+
